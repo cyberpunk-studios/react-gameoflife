@@ -7,19 +7,16 @@ const WIDTH = 800;
 const HEIGHT = 600;
 
 
-class Cell extends React.Component {
+function Cell(props)  {
 
-    render() {
-        const { x, y } = this.props;
-        return (
-            <div className="Cell" style={{
-                left: `${CELL_SIZE * x + 1}px`,
-                top: `${CELL_SIZE * y + 1}px`,
-                width: `${CELL_SIZE - 1}px`,
-                height: `${CELL_SIZE - 1}px`,
-            }} />
-        );
-    }
+    return (
+        <div className="Cell" style={{
+            left: `${CELL_SIZE * props.x + 1}px`,
+            top: `${CELL_SIZE * props.y + 1}px`,
+            width: `${CELL_SIZE - 1}px`,
+            height: `${CELL_SIZE - 1}px`,
+        }} />
+    );
 }
 
 
